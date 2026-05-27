@@ -45,7 +45,7 @@ function Home() {
 
     const getRooms = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/get-rooms');
+            const response = await fetch('https://liveproject-1-ydol.onrender.com/api/get-rooms');
             const result = await response.json();
             if (result.data) {
                 setRooms(result.data);
@@ -59,7 +59,7 @@ function Home() {
     };
 
     const userInfo = async () => {
-        const BASE_API = "http://localhost:5000/api";
+        const BASE_API = "https://liveproject-1-ydol.onrender.com/api";
         try {
             const response = await fetch(`${BASE_API}/get-customerinfo`, {
                 method: "GET",
@@ -114,7 +114,7 @@ function Home() {
         console.log(bookingDetails);
 
         try {
-            const BASE_API = "http://localhost:5000/api";
+            const BASE_API = "https://liveproject-1-ydol.onrender.com/api";
             const response = await fetch(`${BASE_API}/book-now`, {
                 method: "POST",
                 headers: { 'Content-type': 'application/json' },
@@ -139,7 +139,7 @@ function Home() {
     };
 
     const logout = async () => {
-        const BASE_API = "http://localhost:5000/api";
+        const BASE_API = "https://liveproject-1-ydol.onrender.com/api";
         try {
             const data = await fetch(`${BASE_API}/logout-customer`, {
                 credentials: "include",
