@@ -22,7 +22,7 @@ require('./auth/google');
 app.use(bodyParse.json());
 
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://live-project-gold.vercel.app",
   credentials: true
 }))
 
