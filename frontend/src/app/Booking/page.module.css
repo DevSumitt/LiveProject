@@ -1,0 +1,226 @@
+ :root {
+     --gold: #D4AF37;
+     --dark-gold: #996515;
+     --black: #0c0c0c;
+     --grey: #1a1a1a;
+     --text-light: #e0e0e0;
+ }
+
+ body {
+     background-color: var(--black);
+     color: var(--text-light);
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     margin: 0;
+     padding: 20px;
+ }
+
+ .container {
+     min-width: 1100px;
+     margin: 0 auto;
+ }
+
+ .header {
+     text-align: center;
+     border-bottom: 2px solid var(--gold);
+     padding-bottom: 20px;
+     margin-bottom: 30px;
+ }
+
+ .h1 {
+     color: var(--gold);
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     margin: 0;
+ }
+
+ /* Table container ko scrollable banayein */
+ .tablecontainer {
+     background: var(--grey);
+     border-radius: 12px;
+     font-size: 13px;
+     /* Thoda readable size */
+     overflow-x: auto;
+     /* Agar table badi ho toh scroll aa jaye */
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+     border: 1px solid rgba(212, 175, 55, 0.2);
+ }
+
+ .table {
+     width: 100%;
+     border-collapse: collapse;
+     min-width: 900px;
+     /* Taaki columns ek dusre mein na ghusein */
+ }
+
+ /* Padding kam kar di gayi hai */
+ .th,
+ .td {
+     padding: 10px 12px;
+     border-bottom: 1px solid #333;
+     white-space: nowrap;
+     /* Text ko ek hi line mein rakhega */
+ }
+
+ .th {
+     text-transform: uppercase;
+     font-size: 0.75rem;
+     /* Heading thodi choti */
+     letter-spacing: 1px;
+ }
+
+ /* Buttons ko thoda compact banaya */
+ .btn {
+     padding: 5px 8px;
+     font-size: 11px;
+ }
+
+ .btnedit {
+     background-color: transparent;
+     color: var(--gold);
+     border: 1px solid var(--gold);
+ }
+
+ .btnedit:hover {
+     background-color: var(--gold);
+     color: var(--black);
+ }
+
+ .btndelete {
+     background-color: transparent;
+     color: #ff4d4d;
+     border: 1px solid #ff4d4d;
+ }
+
+ .btndelete:hover {
+     background-color: #ff4d4d;
+     color: white;
+ }
+
+ .roomtag {
+     background: rgba(212, 175, 55, 0.15);
+     color: var(--gold);
+     padding: 4px 8px;
+     border-radius: 4px;
+     font-size: 0.85rem;
+ }
+
+ /* Toast Container */
+ #toastcontainer {
+     position: fixed;
+     top: 20px;
+     right: 20px;
+     z-index: 1000;
+ }
+
+ .toast {
+     min-width: 250px;
+     padding: 1rem 1.5rem;
+     margin-bottom: 10px;
+     border-radius: 8px;
+     color: white;
+     font-size: 0.9rem;
+     font-weight: 500;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+     animation: slideIn 0.3s ease-out forwards;
+ }
+
+ /* Toast Types */
+ .toastsuccess {
+     background-color: #10b981;
+     border-left: 5px solid #059669;
+ }
+
+ .toasterror {
+     background-color: #ef4444;
+     border-left: 5px solid #dc2626;
+ }
+
+ .toastinfo {
+     background-color: #3b82f6;
+     border-left: 5px solid #2563eb;
+ }
+
+ /* Animation */
+ @keyframes slideIn {
+     from {
+         transform: translateX(100%);
+         opacity: 0;
+     }
+
+     to {
+         transform: translateX(0);
+         opacity: 1;
+     }
+ }
+
+ @keyframes fadeOut {
+     from {
+         opacity: 1;
+     }
+
+     to {
+         opacity: 0;
+     }
+ }
+
+
+
+ /* Toast Container ko screen ke upar fix karne ke liye */
+ .toastContainer {
+     position: fixed;
+     top: 20px;
+     right: 20px;
+     z-index: 9999;
+     /* Isse modal se bhi upar rakhein */
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+ }
+
+ .toast {
+     padding: 15px 25px;
+     border-radius: 5px;
+     color: white;
+     min-width: 200px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+     animation: slideIn 0.3s ease-out;
+ }
+
+ .success {
+     background-color: #2ed573;
+ }
+
+ .error {
+     background-color: #ff4757;
+ }
+
+ @keyframes slideIn {
+     from {
+         transform: translateX(100%);
+         opacity: 0;
+     }
+
+     to {
+         transform: translateX(0);
+         opacity: 1;
+     }
+ }
+
+ .back {
+     background-color: transparent;
+     color: #ff4d4d;
+     border: 1px solid #ff4d4d;
+     padding: 10px 10px;
+     width: 8%;
+     margin-top: 10px;
+ }
+
+ .back:hover {
+     background-color: red;
+     border: none;
+     color: #fff;
+
+ }
