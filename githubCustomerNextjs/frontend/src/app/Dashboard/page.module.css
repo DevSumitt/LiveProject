@@ -1,0 +1,544 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+ :root {
+     --gold: #c5a059;
+     --dark-bg: #0b0d17;
+     --card-bg: rgba(255, 255, 255, 0.05);
+     --text: #e0e0e0;
+     --success: #27ae60;
+     --danger: #e74c3c;
+ }
+
+ body {
+     font-family: 'Poppins', sans-serif;
+     background-color: var(--dark-bg);
+     background-image: radial-gradient(circle at top right, #1a1c2c, #0b0d17);
+     color: var(--text);
+     margin: 0;
+     scroll-behavior: smooth;
+ }
+
+ /* --- Navbar Section --- */
+
+
+ .logo {
+     font-size: 1.5rem;
+     font-weight: 700;
+     color: var(--gold);
+     letter-spacing: 2px;
+     text-decoration: none;
+ }
+
+ .ul {
+     list-style: none;
+     display: flex;
+     gap: 30px;
+     margin: 0;
+     padding: 0;
+ }
+
+ .navlinks .a {
+     text-decoration: none;
+     color: white;
+     font-size: 0.9rem;
+     font-weight: 400;
+     transition: 0.3s;
+     text-transform: uppercase;
+ }
+
+ .navlinks a:hover {
+     color: var(--gold);
+ }
+
+ .NamesDiv {
+     display: 'flex';
+     align-items: 'center';
+     gap: '20px';
+ }
+
+ .userprofile {
+     display: 'flex';
+     align-items: 'center';
+     gap: '15px';
+     border-left: '1px solid rgba(197, 160, 89, 0.3)';
+     padding-left: '20px';
+ }
+
+ .userdetails {
+     text-align: right;
+     color: 'var(--gold)';
+     font-weight: 600;
+     font-size: '0.9rem';
+ }
+
+ .navbtn {
+     background: var(--gold);
+     color: black;
+     padding: 8px 20px;
+     border-radius: 5px;
+     font-weight: 600;
+     text-decoration: none;
+     transition: 0.3s;
+     box-shadow: 0 0 10px rgba(197, 160, 89, 0.4);
+ }
+
+ .navbtn:hover {
+     background: white;
+     transform: scale(1.05);
+ }
+
+ /* --- Content Layout --- */
+ .mainwrapper {
+     max-width: 1100px;
+     margin: 0 auto;
+     padding: 20px;
+ }
+
+ .header {
+     text-align: center;
+     padding: 60px 0;
+ }
+
+ .navbar {
+     width: "100%";
+     padding: "30px";
+     display: "flex";
+     justify-content: "space-between";
+     align-items: "center";
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px 8%;
+     background: rgba(11, 13, 23, 0.95);
+     backdrop-filter: blur(10px);
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+     border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+ }
+
+ .header .h1 {
+     font-size: 3.5rem;
+     margin: 0;
+     color: var(--gold);
+     text-transform: uppercase;
+     letter-spacing: 8px;
+     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+ }
+
+ /* --- NEW: Inventory Dashboard Section --- */
+ .inventorybar {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+     gap: 15px;
+     margin-bottom: 40px;
+     background: var(--card-bg);
+     padding: 20px;
+     border-radius: 15px;
+     border: 1px solid rgba(197, 160, 89, 0.2);
+     text-align: center;
+     margin-left: 140px;
+     width: 80%;
+
+ }
+
+ .invitem .h4 {
+     margin: 0;
+     font-size: 0.8rem;
+     text-transform: uppercase;
+     opacity: 0.7;
+ }
+
+ .invitem .number {
+     font-size: 2rem;
+     font-weight: 700;
+     color: var(--gold);
+     display: block;
+ }
+
+#avail {
+     color: var(--success);
+ }
+
+ .sectiontitle {
+     border-left: 4px solid var(--gold);
+     padding-left: 15px;
+     margin: 50px 0 30px 0;
+     font-size: 1.8rem;
+     text-transform: uppercase;
+     margin-left: 170px;
+ }
+
+ /* --- Room Cards --- */
+ .grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 25px;
+ }
+
+ .itemcard {
+     background: var(--card-bg);
+     border-radius: 15px;
+     padding: 25px;
+     border: 1px solid rgba(255, 255, 255, 0.1);
+     transition: 0.4s ease;
+     position: relative;
+ }
+
+ .itemcard:hover {
+     border-color: var(--gold);
+     background: rgba(255, 255, 255, 0.08);
+     transform: translateY(-10px);
+ }
+
+ .availtag {
+     font-size: 0.75rem;
+     font-weight: 600;
+     background: rgba(39, 174, 96, 0.2);
+     color: var(--success);
+     padding: 4px 10px;
+     border-radius: 5px;
+     display: inline-block;
+     margin-bottom: 10px;
+     margin-left: 110px;
+ }
+
+ .pricetag {
+     color: var(--gold);
+     font-size: 2rem;
+     font-weight: 700;
+     margin: 15px 0;
+ }
+
+ /* --- Food Menu Section --- */
+ .foodmenu {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 20px;
+     background: var(--card-bg);
+     padding: 30px;
+     border-radius: 15px;
+ }
+
+ .fooditem {
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+     padding: 12px 0;
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .fooditem .span {
+     font-weight: 500;
+ }
+
+ .fooditem .b {
+     color: var(--gold);
+ }
+
+ /* --- Booking Form --- */
+ .bookingcontainer {
+     background: linear-gradient(135deg, #c5a059, #a3813d);
+     padding: 30px;
+     border-radius: 15px;
+     margin: 60px 0;
+     color: black;
+ }
+
+ .bookingform {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+     align-items: flex-end;
+ }
+
+ .inputbox {
+     display: flex;
+     flex-direction: column;
+     flex: 1;
+     min-width: 150px;
+ }
+
+ .inputbox .label {
+     font-weight: 700;
+     font-size: 0.8rem;
+     margin-bottom: 5px;
+ }
+
+ .inputbox .input,
+ .select {
+     padding: 12px;
+     border: none;
+     border-radius: 5px;
+ }
+
+ .btnreserve {
+     background: #000;
+     color: #fff;
+     padding: 13px 40px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     font-weight: 700;
+     transition: 0.3s;
+ }
+
+ .btnreserve:hover {
+     background: #333;
+ }
+
+ @media (max-width: 768px) {
+     .nav-links {
+         display: none;
+     }
+
+     .food-menu {
+         grid-template-columns: 1fr;
+     }
+
+     .header .h1 {
+         font-size: 2.2rem;
+     }
+ }
+
+ #roomscontainer {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 30px;
+     padding: 20px;
+     justify-content: center;
+ }
+
+ .itemcard {
+     width: 300px;
+     border: 1px solid #e0e0e0;
+     border-radius: 12px;
+     padding: 15px;
+     display: flex;
+     flex-direction: column;
+     transform: translateY(-5px);
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     transition: transform 0.2s;
+ }
+
+
+ /* Tablet aur Mobile ke liye auto-adjust */
+ @media (max-width: 1024px) {
+     .itemcard {
+         width: calc(50% - 20px);
+     }
+ }
+
+ @media (max-width: 650px) {
+     .itemcard {
+         width: 100%;
+     }
+ }
+
+
+ /* Toast Container */
+ #toastcontainer {
+     position: fixed;
+     top: 20px;
+     right: 20px;
+     z-index: 3000;
+ }
+
+ .toast {
+     min-width: 250px;
+     padding: 1rem 1.5rem;
+     margin-bottom: 10px;
+     border-radius: 8px;
+     color: white;
+     font-size: 0.9rem;
+     font-weight: 500;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+     animation: slideIn 0.3s ease-out forwards;
+ }
+
+ /* Toast Types */
+ .toastsuccess {
+     background-color: #10b981;
+     border-left: 5px solid #059669;
+ }
+
+ .toasterror {
+     background-color: #ef4444;
+     border-left: 5px solid #dc2626;
+ }
+
+ .toastinfo {
+     background-color: #3b82f6;
+     border-left: 5px solid #2563eb;
+ }
+
+ /* Animation */
+ @keyframes slideIn {
+     from {
+         transform: translateX(100%);
+         opacity: 0;
+     }
+
+     to {
+         transform: translateX(0);
+         opacity: 1;
+     }
+ }
+
+ @keyframes fadeOut {
+     from {
+         opacity: 1;
+     }
+
+     to {
+         opacity: 0;
+     }
+ }
+
+ /* --- Modern Modal Styling --- */
+ .modal {
+     display: none;
+     position: fixed;
+     z-index: 2000;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     /* background-color: rgba(0, 0, 0, 0.85); */
+     backdrop-filter: blur(8px);
+     align-items: center;
+     justify-content: center;
+ }
+
+ .modalcontent {
+     background: #ffffff;
+     background-image: linear-gradient(145deg, #1a1e2e, #0b0d17);
+     padding: 40px;
+     border-radius: 20px;
+     width: 90%;
+     max-width: 450px;
+     margin-left: 400px;
+     margin-top: 0px;
+     border: 1px solid rgba(197, 160, 89, 0.4);
+     position: relative;
+     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+     animation: modalSlideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+
+ @keyframes modalSlideUp {
+     from {
+         transform: translateY(50px);
+         opacity: 0;
+     }
+
+     to {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+
+ .closemodal {
+     position: absolute;
+     right: 20px;
+     top: 15px;
+     font-size: 28px;
+     color: var(--gold);
+     cursor: pointer;
+     transition: 0.3s;
+ }
+
+ .closemodal:hover {
+     color: white;
+     transform: rotate(90deg);
+ }
+
+ #modalRoomName {
+     color: var(--gold);
+     font-size: 1.8rem;
+     margin-bottom: 10px;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+ }
+
+ .formgroup {
+     margin-bottom: 20px;
+     text-align: left;
+ }
+
+ .formgroup .label {
+     display: block;
+     font-size: 0.75rem;
+     color: var(--gold);
+     margin-bottom: 8px;
+     font-weight: 600;
+     text-transform: uppercase;
+ }
+
+ .formgroup .input {
+     width: 60%;
+     height: 20px;
+     padding: 12px;
+     background: rgba(255, 255, 255, 0.05);
+     border: 1px solid rgba(197, 160, 89, 0.2);
+     border-radius: 8px;
+     color: white;
+     box-sizing: border-box;
+     /* Padding handling */
+     outline: none;
+     transition: 0.3s;
+ }
+
+ .formgroup .input:focus {
+     border-color: var(--gold);
+     background: rgba(255, 255, 255, 0.1);
+ }
+
+ .btnconfirm {
+     width: 100%;
+     background: var(--gold);
+     color: black;
+     padding: 15px;
+     border: none;
+     border-radius: 8px;
+     font-weight: 700;
+     font-size: 1rem;
+     cursor: pointer;
+     text-transform: uppercase;
+     transition: 0.3s;
+     margin-top: 10px;
+ }
+
+ .btnconfirm:hover {
+     background: white;
+     box-shadow: 0 0 20px rgba(197, 160, 89, 0.4);
+ }
+
+ /* Toast Container ko screen ke upar fix karne ke liye */
+.toastContainer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999; /* Isse modal se bhi upar rakhein */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    animation: slideIn 0.3s ease-out;
+}
+
+.success { background-color: #2ed573; }
+.error { background-color: #ff4757; }
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
