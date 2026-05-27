@@ -14,7 +14,7 @@ const sessioninfo = require("./config/session");
 const MongoStore = require("connect-mongo").default;
 
 const app = express();
-
+app.set('trust proxy',1)
 myDB();
 
 require('./auth/google');
