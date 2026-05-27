@@ -22,7 +22,7 @@ function Home() {
 
     const Booknfo = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/getBooking-info');
+            const response = await fetch('https://liveproject-1-ydol.onrender.com/api/getBooking-info');
             const result = await response.json();
             setBookings(result.data || result);
         } catch (err) {
@@ -32,7 +32,7 @@ function Home() {
 
     const deleteBooking = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/deleteBooking/${id}`, {
+            const response = await fetch(`https://liveproject-1-ydol.onrender.com/api/deleteBooking/${id}`, {
                 method: 'DELETE',
             });
             const result = await response.json();
@@ -50,7 +50,7 @@ function Home() {
         }
     };
     const userInfo = async () => {
-        const BASE_API = "http://localhost:5000/api";
+        const BASE_API = "https://liveproject-1-ydol.onrender.com/api";
         try {
             const response = await fetch(`${BASE_API}/get-customerinfo`, {
                 method: "GET",
