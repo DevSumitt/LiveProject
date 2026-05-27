@@ -22,7 +22,7 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const BASE_API = "http://localhost:5000/api";
+      const BASE_API = "https://liveproject-1-ydol.onrender.com/api";
       const response = await fetch(`${BASE_API}/logincustomer`, {
         method: "POST",
         credentials: "include",
@@ -49,7 +49,7 @@ export default function Home() {
   const handleGoogleLogin = async (e) => {
     e.preventDefault();
     try {
-      window.location.href = "http://localhost:5000/auth/google"; 
+      window.location.href = "https://liveproject-1-ydol.onrender.com/auth/google"; 
     } catch (error) {
       showToast("Google login failed. Try again.", "error");
     }
