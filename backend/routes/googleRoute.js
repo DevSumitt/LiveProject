@@ -9,7 +9,7 @@ router.get('/auth/google', passport.authenticate('google', { scope: ['profile', 
 
 router.get('/auth/google/callback',
     passport.authenticate('google', {
-        failureRedirect: 'http://localhost:3000/login'
+        failureRedirect: 'https://live-project-gold.vercel.app/login'
     }),
     customerAuth, authController.hello
 );
