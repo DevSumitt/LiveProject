@@ -35,7 +35,7 @@ export default function Home() {
         showToast("Login Successful!", "success");
         
         setTimeout(() => {
-          router.push("/Dashboard"); 
+          // router.push("/Dashboard"); 
         }, 2000);
 
       } else {
