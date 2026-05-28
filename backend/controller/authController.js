@@ -16,7 +16,7 @@ exports.hello = async (req, res) => {
             })
         }
 
-        res.redirect('http://localhost:3000/Dashboard')
+        res.redirect('https://live-project-gold.vercel.app/Dashboard')
 
     } catch (err) {
         console.log('something went wrong...')
